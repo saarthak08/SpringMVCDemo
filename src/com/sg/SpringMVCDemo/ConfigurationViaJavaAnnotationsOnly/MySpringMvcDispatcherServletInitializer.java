@@ -1,5 +1,5 @@
 package com.sg.SpringMVCDemo.ConfigurationViaJavaAnnotationsOnly;
-
+/*
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -20,4 +20,4 @@ public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationC
         return new String[]{"/"};
     }
 }
-
+*/
