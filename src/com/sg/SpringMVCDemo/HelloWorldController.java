@@ -1,7 +1,13 @@
 package com.sg.SpringMVCDemo;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HelloWorldController {
@@ -14,6 +20,28 @@ public class HelloWorldController {
 	//need a controller method to process the HTML form
 	@RequestMapping("/processForm")
 	public String processForm() {
+	
 		return "helloworld";
+	}
+	
+	//new controller method to read form data
+	//& add the data to the model
+	@RequestMapping("/processFormInCapitalLetter")
+	public String processFormInCapitalLetter(HttpServletRequest request, Model model){
+		
+		//read the request parameter from HTML form
+		String theString=request.getParameter("studentName");
+		
+		//convert data to all caps
+		if(theString!=null) {
+		theString=theString.toUpperCase();
+
+		//create the message
+		String message="Yo! "+theString;
+		
+		//add message to the model
+		model.addAttribute("message",message);
+		}
+		return "capital-form";
 	}
 }
