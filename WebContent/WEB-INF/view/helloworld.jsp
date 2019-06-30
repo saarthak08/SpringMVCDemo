@@ -15,5 +15,10 @@
 			<input type="submit" value="Click Here to see the message.">
 	</form>
 	
+	<form method="GET" action="processFormWithRequestParam">
+			<input type="hidden" name="studentName" value=<%=request.getParameter("studentName") %>>
+			<input type="submit" value="Click Here to see the hello message.">
+	</form>
+	
 </body>
 </html>

@@ -8,8 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 
 @Controller
+@RequestMapping("/helloWorld")
 public class HelloWorldController {
 	//need a controller method to show initial HTML form
 	@RequestMapping("/showForm")
@@ -42,6 +46,19 @@ public class HelloWorldController {
 		//add message to the model
 		model.addAttribute("message",message);
 		}
+		return "capital-form";
+	}
+	
+	
+	@RequestMapping("processFormWithRequestParam")
+	public String processFormWithRequestParam(@RequestParam("studentName")String name, Model model) {
+		if(name!=null) {
+			name=name.toUpperCase();
+			String messageString="Hello! "+name;
+			model.addAttribute("message",messageString);
+			
+		}
+		
 		return "capital-form";
 	}
 }

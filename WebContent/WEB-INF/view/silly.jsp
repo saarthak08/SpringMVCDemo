@@ -14,13 +14,8 @@
 
 <body>
 
-<h2>Spring MVC Demo - Home Page</h2>
+<h2>Spring MVC Demo - Home Page! This is the silly controller Web Page</h2>
 
-<a href="helloWorld/showForm">Go to HelloWorld form!</a>
-
-<br>
-
-<a href="student/showForm">Go to student form!</a>
 
 <br><br>
 
@@ -33,8 +28,3 @@
 </body>
 
 </html>
-
-
-
-
-
