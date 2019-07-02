@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@page isELIgnored="false" %>
 <! DOCTYPE html>
 <html>
 <head>
@@ -14,15 +15,23 @@
 		First Name: <form:input path="firstName"/>
 		<br>
 		Last Name: <form:input path="lastName"/>
-		<br>
+		<br> <br>
 		Country: 
-		<form:select value="Country" path="country">
-			<form:option value="Brazil" label="Brazil"/>
-			<form:option value="Argentina" label="Argentina"/>
-			<form:option value="France" label="France"/>
-			<form:option value="India" label="India"/>
-			<form:option value="Germany" label="Germany"/>
+		<form:select path="country">
+			<form:options items="${theCountryOptions}"/>
 		</form:select>
+		<br> <br>
+		Java <form:radiobutton path="favouriteLanguage" value="Java"/>
+		C <form:radiobutton path="favouriteLanguage" value="C"/>
+		C++ <form:radiobutton path="favouriteLanguage" value="C++"/>
+		PHP <form:radiobutton path="favouriteLanguage" value="PHP"/>
+		JavaScript <form:radiobutton path="favouriteLanguage" value="JavaScript"/>
+		<br> <br>
+		Operating Systems:
+		Linux <form:checkbox path="favouriteOperatingSystem" value="Linux"/>
+		MacOS <form:checkbox path="favouriteOperatingSystem" value="MacOS"/>
+		Windows <form:checkbox path="favouriteOperatingSystem" value="Windows"/>
+		<br> <br>
 		<input type="submit" value="Submit">
 	</form:form>
 	
