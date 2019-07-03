@@ -79,7 +79,28 @@
         <artifactId>spring-integration-core</artifactId>
         <version>5.1.6.RELEASE</version>
       </dependency>
-
+      <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+	<dependency>
+    	<groupId>org.hibernate.validator</groupId>
+    	<artifactId>hibernate-validator</artifactId>
+    	<version>6.1.0.Alpha5</version>
+	</dependency>
+      
+	<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator-annotation-processor -->
+	<dependency>
+ 	   <groupId>org.hibernate.validator</groupId>
+  	  <artifactId>hibernate-validator-annotation-processor</artifactId>
+ 	   <version>6.1.0.Alpha5</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator-cdi -->
+	<dependency>
+    	<groupId>org.hibernate.validator</groupId>
+    	<artifactId>hibernate-validator-cdi</artifactId>
+    	<version>6.1.0.Alpha5</version>
+	</dependency>
+	
+	
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
