@@ -24,6 +24,10 @@
 
 <a href="student/showForm">Go to student form!</a>
 
+<br>
+
+<a href="customer/showForm">Go to customer form!</a>
+
 <br><br>
 
 <img src="${pageContext.request.contextPath}/resources/images/spring-logo.png" />
