@@ -35,6 +35,7 @@ public class CustomerController {
 	}
 	
 	//add an initbinder .. to convert trim input strings
+	//init binder is a preprocessing code
 	//removing leading and trailing whitespaces
 	//resolve issue for validation
 	@InitBinder
